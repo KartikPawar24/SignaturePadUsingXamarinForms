@@ -2,13 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SignaturePadUsingXamarinForms"
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
              x:Class="SignaturePadUsingXamarinForms.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+
+        <forms:SignaturePadView x:Name="MainSignaturePad"
+                                BackgroundColor="White"
+                                StrokeColor="Black"
+                                StrokeWidth="2"
+                                WidthRequest="280"
+                                HeightRequest="360"/>
+
+        <Button x:Name="SaveBtn"
+                Text="Save"
+                BackgroundColor="Green"
+                Clicked="SaveBtn_Clicked"/>
+
+        <Button x:Name="ClearBtn"
+                Text="Clear"
+                BackgroundColor="Red"
+               Clicked="ClearBtn_Clicked"/>
+        
     </StackLayout>
 
 </ContentPage>
+    
+    
+    
+    
